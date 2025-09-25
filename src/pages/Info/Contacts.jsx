@@ -1,10 +1,17 @@
 import React from "react";
 
 export default function Contacts() {
-    const contacts = [
-        { role: "Dirección", name: "Prof. Juan Perez", phone: "+54 9 11 1234 5678", email: "direccion@escuela.edu.ar" },
-        { role: "Secretaría", name: "Sra. Ana Gomez", phone: "+54 9 11 9876 5432", email: "secretaria@escuela.edu.ar" }
+    const directivos = [
+        { role: "Regente", name: "Javier Campagna" },
+        { role: "Vicerector", name: "Carlos Salvarey" },
+        { role: "Secretaria", name: "Silvina Villanueva" },
+        { role: "Regente Turno Mañana", name: "Silvia Echanagoria" },
+        { role: "Regente Turno Tarde", name: "Marcelo Veiro" },
+        { role: "Regente Turno Noche", name: "Silvana Sardelini" },
+        { role: "Subregente Turno Tarde", name: "Mauro Rodriguez" },
+        { role: "J.G.E Práctica", name: "Nicolas Policaro" },
     ];
+
     const socials = [
         { name: "Facebook", url: "https://www.facebook.com/EgresadosET35/?locale=es_LA", icon: "/facebook.png" },
         { name: "Instagram", url: "https://www.instagram.com/et.35.ing.eduardo.latzina/?hl=es", icon: "/instagram.png" },
@@ -13,14 +20,18 @@ export default function Contacts() {
 
     return (
         <div>
-            <h2>Contactos y Redes</h2>
+            <h2>Contactos</h2>
 
             <div className="card">
-                <h3>Contactos</h3>
+                <p><strong>Teléfono:</strong> 4567-5838</p>
+            </div>
+
+            <div className="card">
+                <h3>Directivos de la Escuela</h3>
                 <ul>
-                    {contacts.map((c, i) => (
+                    {directivos.map((d, i) => (
                         <li key={i}>
-                            <strong>{c.role}:</strong> {c.name} — {c.phone} — {c.email}
+                            <strong>{d.role}:</strong> {d.name}
                         </li>
                     ))}
                 </ul>
@@ -31,7 +42,12 @@ export default function Contacts() {
                 <ul style={{ display: "flex", gap: "20px", listStyle: "none" }}>
                     {socials.map((s, i) => (
                         <li key={i}>
-                            <a href={s.url} target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                            <a
+                                href={s.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                style={{ display: "flex", alignItems: "center", gap: "8px" }}
+                            >
                                 <img src={s.icon} alt={s.name} style={{ width: "24px", height: "24px" }} />
                                 {s.name}
                             </a>

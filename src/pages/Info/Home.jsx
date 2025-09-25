@@ -4,10 +4,10 @@ import news from '../../data/news.json'
 export default function Home(){
     return (
         <div>
-            <h2>Bienvenidos a la Escuela Técnica N°35</h2>
+            <h2>Bienvenidos a la Escuela TÃ©cnica NÂ°35</h2>
             <p>
-                Nuestro compromiso es formar técnicos con una sólida preparación académica y humana,
-                acompañando a cada estudiante en su crecimiento profesional.
+                Nuestro compromiso es formar tÃ©cnicos con una sÃ³lida preparaciÃ³n acadÃ©mica y humana,
+                acompaÃ±ando a cada estudiante en su crecimiento profesional.
             </p>
 
             <div style={{ display: "flex", gap: "20px", margin: "20px 0" }}>
