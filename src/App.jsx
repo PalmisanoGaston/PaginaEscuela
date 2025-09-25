@@ -21,24 +21,31 @@ export default function App() {
 
   return (
     <div className="app">
-      <header className="header">
-        <h1>Escuela Secundaria - Nombre</h1>
-        <nav className="nav">
-          <Link to="/">Inicio</Link>
-          <Link to="/info/location">Localización</Link>
-          <Link to="/info/history">Historia</Link>
-          <Link to="/info/cooperadora">Cooperadora</Link>
-          <Link to="/info/contacts">Contactos</Link>
-          <div className="dropdown">
-            <span>Alumno ▾</span>
-            <div className="dropdown-content">
-              <Link to="/alumno/subjects">Asignaturas</Link>
-              <Link to="/alumno/virtual-tour">Recorrida Virtual</Link>
-              <Link to="/alumno/reglamento">Reglamento Interno</Link>
-            </div>
-          </div>
-        </nav>
-      </header>
+          <header className="header" style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+              <img
+                  src="/la35.png"   // coloca el archivo logo.png dentro de /public
+                  alt="Logo Escuela"
+                  style={{ height: "60px" }}
+              />
+              <h1>Escuela Técnica N°35 - Ingeniero Eduardo Latzina</h1>
+
+              <nav className="nav" style={{ marginLeft: "auto" }}>
+                  <Link to="/">Inicio</Link>
+                  <Link to="/info/location">Localización</Link>
+                  <Link to="/info/history">Historia</Link>
+                  <Link to="/info/cooperadora">Cooperadora</Link>
+                  <Link to="/info/contacts">Contactos</Link>
+                  <div className="dropdown">
+                      <span>Alumno ▾</span>
+                      <div className="dropdown-content">
+                          <Link to="/alumno/subjects">Asignaturas</Link>
+                          <Link to="/alumno/virtual-tour">Recorrida Virtual</Link>
+                          <Link to="/alumno/reglamento">Reglamento Interno</Link>
+                      </div>
+                  </div>
+              </nav>
+          </header>
+
 
       <main className="main">
         <AnimatePresence mode="wait">
