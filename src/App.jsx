@@ -1,4 +1,4 @@
-// src/App.jsx
+﻿// src/App.jsx
 import React from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -66,7 +66,7 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        © {new Date().getFullYear()} Escuela Secundaria - Todos los derechos
+              © {new Date().getFullYear()} Escuela Técnica 35 - Eduardo Latzina. Todos los derechos reservados.s
       </footer>
     </div>
   );
