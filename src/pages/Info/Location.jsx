@@ -1,39 +1,51 @@
-import React from 'react'
+import React from "react";
 
-const render = (status) => <h3>{status}</h3>
+export default function Location() {
+    return (
+        <div>
+            <h2>Localización</h2>
 
-function Map({ center, zoom }){
-  const ref = React.useRef()
-  React.useEffect(()=>{
-    if(!ref.current) return
-    const map = new window.google.maps.Map(ref.current, {center, zoom})
-    new window.google.maps.Marker({position:center,map})
-  }, [ref, center, zoom])
+            <div className="card">
+                <p><strong>Dirección:</strong> Virgilio 1980, C1408 Ciudad Autónoma de Buenos Aires</p>
+                <p><strong>Teléfono:</strong> 4567-2244 / 4341</p>
 
-  return <div ref={ref} style={{height:400, width:'100%'}} />
-}
+                <p><strong>Colectivos a menos de 5 cuadras:</strong></p>
+                <ul>
+                    <li>25</li>
+                    <li>53</li>
+                    <li>106</li>
+                    <li>107</li>
+                    <li>108</li>
+                    <li>124</li>
+                    <li>135</li>
+                    <li>181</li>
+                </ul>
 
-export default function Location(){
-  // REEMPLAZA coords por las reales
-  const school = { lat: -34.6037, lng: -58.3816 }
-  const busLines = ["Línea 1 - A 200m", "Línea 23 - A 350m"]
+                <p><strong>Colectivos entre 5 y 10 cuadras:</strong></p>
+                <ul>
+                    <li>21</li>
+                    <li>28</li>
+                    <li>80</li>
+                    <li>85</li>
+                    <li>114</li>
+                    <li>117</li>
+                    <li>146</li>
+                </ul>
+            </div>
 
-  return (
-    <div>
-      <h2>Localización</h2>
-      <div className="card">
-        <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad</p>
-        <p><strong>Colectivos cercanos:</strong></p>
-        <ul>
-          {busLines.map((b,i)=>(<li key={i}>{b}</li>))}
-        </ul>
-      </div>
-
-      <div className="card">
-        <h3>Mapa</h3>
-        {/* Uso de API: define REACT_APP_GOOGLE_MAPS_API_KEY en .env y sigue la instrucción en README */}
-
-      </div>
-    </div>
-  )
+            <div className="card" style={{ marginTop: "20px" }}>
+                <h3>Mapa</h3>
+                <iframe
+                    title="Ubicación de la escuela"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.045122045073!2d-58.505703!3d-34.629380!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc9eac0f37c31%3A0x7c617a3f1f9e2db5!2sVirgilio%201980%2C%20C1408%20CABA!5e0!3m2!1ses-419!2sar!4v1695632400000!5m2!1ses-419!2sar"
+                    width="100%"
+                    height="400"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
+    );
 }
